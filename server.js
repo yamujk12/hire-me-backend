@@ -12,7 +12,7 @@ app.use(express.json());
 app.use(cors());
 
 // Database Connection
-mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect(process.env.MONGO_URI, { useNewUrlParser: true, useUnifiedTopology: true,tlsAllowInvalidCertificates: true });
 
 // User Schema
 const UserSchema = new mongoose.Schema({
